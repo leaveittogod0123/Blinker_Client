@@ -1,27 +1,32 @@
-(function exampleCode() {
-  "use strict";
-
-  brfv4Example.initCurrentExample = function(brfManager, resolution) {
-    brfManager.init(resolution, resolution, brfv4Example.appId);
+(function exampleCode () {
+  'use strict';
+  brfv4Example.initCurrentExample = function (brfManager, resolution) {
+    brfManager.init (resolution, resolution, brfv4Example.appId);
   };
 
-  brfv4Example.updateCurrentExample = function(brfManager, imageData, draw) {
-    brfManager.update(imageData);
+  brfv4Example.updateCurrentExample = function (brfManager, imageData, draw) {
+    brfManager.update (imageData);
 
-    draw.clear();
+    draw.clear ();
 
     // Face detection results: a rough rectangle used to start the face tracking.
 
-    draw.drawRects(brfManager.getAllDetectedFaces(), false, 1.0, 0x00a1ff, 0.5);
-    draw.drawRects(
-      brfManager.getMergedDetectedFaces(),
+    draw.drawRects (
+      brfManager.getAllDetectedFaces (),
+      false,
+      1.0,
+      0x00a1ff,
+      0.5
+    );
+    draw.drawRects (
+      brfManager.getMergedDetectedFaces (),
       false,
       2.0,
       0xffd200,
       1.0
     );
 
-    var faces = brfManager.getFaces(); // default: one face, only one element in that array.
+    var faces = brfManager.getFaces (); // default: one face, only one element in that array.
 
     for (var i = 0; i < faces.length; i++) {
       var face = faces[i];
@@ -38,20 +43,20 @@
 
         var v = face.vertices;
 
-        if (_oldFaceShapeVertices.length === 0) storeFaceShapeVertices(v);
+        if (_oldFaceShapeVertices.length === 0) storeFaceShapeVertices (v);
 
         var k, l, yLE, yRE;
 
         // Left eye movement (y)
 
-        for (k = 36, l = 41, yLE = 0; k <= l; k++) {
+        for ((k = 36), (l = 41), (yLE = 0); k <= l; k++) {
           yLE += v[k * 2 + 1] - _oldFaceShapeVertices[k * 2 + 1];
         }
         yLE /= 18; //default 6
 
         // Right eye movement (y)
 
-        for (k = 42, l = 47, yRE = 0; k <= l; k++) {
+        for ((k = 42), (l = 47), (yRE = 0); k <= l; k++) {
           yRE += v[k * 2 + 1] - _oldFaceShapeVertices[k * 2 + 1];
         }
 
@@ -67,21 +72,21 @@
         yN += v[30 * 2 + 1] - _oldFaceShapeVertices[30 * 2 + 1];
         yN /= 16; //default 4
 
-        var blinkRatio = Math.abs((yLE + yRE) / yN);
+        var blinkRatio = Math.abs ((yLE + yRE) / yN);
 
         if (blinkRatio > 12 && (yLE > 0.4 || yRE > 0.4)) {
-          console.log(
-            "blink " +
-              blinkRatio.toFixed(2) +
-              " " +
-              yLE.toFixed(2) +
-              " " +
-              yRE.toFixed(2) +
-              " " +
-              yN.toFixed(2)
+          console.log (
+            'blink ' +
+              blinkRatio.toFixed (2) +
+              ' ' +
+              yLE.toFixed (2) +
+              ' ' +
+              yRE.toFixed (2) +
+              ' ' +
+              yN.toFixed (2)
           );
-          bird.jump();
-          blink();
+
+          blink ();
         }
 
         // Let the color of the shape show whether you blinked.
@@ -94,7 +99,7 @@
 
         // Face Tracking results: 68 facial feature points.
 
-        draw.drawTriangles(
+        draw.drawTriangles (
           face.vertices,
           face.triangles,
           false,
@@ -102,34 +107,35 @@
           color,
           0.4
         );
-        draw.drawVertices(face.vertices, 2.0, false, color, 0.4);
+        draw.drawVertices (face.vertices, 2.0, false, color, 0.4);
 
-        brfv4Example.dom.updateHeadline(
-          "BRFv4 - advanced - face tracking - simple blink" +
-            "detection.\nDetects an eye  blink: " +
-            (_blinked ? "Yes" : "No")
+        brfv4Example.dom.updateHeadline (
+          'BRFv4 - advanced - face tracking - simple blink' +
+            'detection.\nDetects an eye  blink: ' +
+            (_blinked ? 'Yes' : 'No')
         );
 
-        storeFaceShapeVertices(v);
+        storeFaceShapeVertices (v);
       }
     }
   };
 
-  function blink() {
+  function blink () {
     _blinked = true;
+    bird.jump ();
 
     if (_timeOut > -1) {
-      clearTimeout(_timeOut);
+      clearTimeout (_timeOut);
     }
-    console.log("blink!");
-    _timeOut = setTimeout(resetBlink, 0);
+    console.log ('blink!');
+    _timeOut = setTimeout (resetBlink, 0);
   }
 
-  function resetBlink() {
+  function resetBlink () {
     _blinked = false;
   }
 
-  function storeFaceShapeVertices(vertices) {
+  function storeFaceShapeVertices (vertices) {
     for (var i = 0, l = vertices.length; i < l; i++) {
       _oldFaceShapeVertices[i] = vertices[i];
     }
@@ -139,10 +145,11 @@
   var _blinked = false;
   var _timeOut = -1;
 
-  brfv4Example.dom.updateHeadline(
-    "BRFv4 - advanced - face tracking - simple blink detection.\n" +
-      "Detects a blink of the eyes: "
+
+  brfv4Example.dom.updateHeadline (
+    'BRFv4 - advanced - face tracking - simple blink detection.\n' +
+      'Detects a blink of the eyes: '
   );
 
-  brfv4Example.dom.updateCodeSnippet(exampleCode + "");
-})();
+  brfv4Example.dom.updateCodeSnippet (exampleCode + '');
+}) ();

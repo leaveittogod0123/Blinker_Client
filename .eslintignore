@@ -10,5 +10,4 @@ node_modules/
 
 public/js
 public/assets
-
-public/gameScript.js
+public/games

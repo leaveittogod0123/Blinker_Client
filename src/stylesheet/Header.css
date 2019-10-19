@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  line-height: 39px;
+  color: white;
+}
+
+.header-blink {
+  background-size: cover;
+  width: 200px;
+  object-fit: contain;
+}
+
+#nav-center {
+  justify-content: space-between;
+  padding-left: 104px;
+}
+
+#nav-center span {
+  margin: 0em 2em;
+}
+
+#nav-right span {
+  margin-left: 2em;
+}
+/*.menu-item:hover {*/
+/*    background-color:  #495057 ;*/
+/*}*/
+/*.menu-item:active, .menu-item.active {*/
+/*    background-color:  #1862ab ;*/
+/*}*/

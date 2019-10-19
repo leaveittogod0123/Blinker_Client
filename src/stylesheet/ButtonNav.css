@@ -1,0 +1,34 @@
+.container{
+    display : flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn-nav-item{
+
+}
+.btn-nav-item:nth-child(1){
+    margin: 20px;
+}
+.btn-nav-item:nth-child(2){
+    margin: 20px;
+}
+
+
+#restart-btn{
+    background-image: url("/img/button-red.png");
+    color: #ffffff;
+    width: 330px;
+    height: 60px;
+    font-size: 24px;
+}
+
+#goback-btn{
+    background-image: url("/img/button-blue.png");
+    color: #ffffff;
+    width: 330px;
+    height: 60px;
+    font-size: 24px;
+}
+
+

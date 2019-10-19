@@ -1,0 +1,142 @@
+/*.home-btn{*/
+/*    background-image: url("/img/button.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*}*/
+
+/*.signin-btn{*/
+/*    background-image: url("/img/red.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    color: #ffffff;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    font-size: 24px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+
+
+/*.create-an-account-btn{*/
+/*    background-image: url("/img/button.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    color: #ffffff;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    font-size: 24px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+/*.signup-btn{*/
+/*    background-image: url("/img/red.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    color: #ffffff;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    font-size: 24px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+/*.start-flappy-btn{*/
+/*    background-image: url("/img/red.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    color: #ffffff;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    font-size: 24px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+/*.button {*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    background-color: transparent;*/
+/*    display: block;*/
+/*    margin: 1em auto;*/
+/*}*/
+
+.home-btn{
+    width: 330px;
+    height: 60px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: 1em auto;
+    cursor: pointer;
+}
+
+.start-flappy-btn{
+    background-image: url("/img/button-red.png");
+    width: 330px;
+    height: 60px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: 1em auto;
+    cursor: pointer;
+}
+
+
+.button {
+    width: 330px;
+    height: 60px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: 1em auto;
+    cursor: pointer;
+}
+
+.button-blue{
+    background-image: url("/img/button-blue.png");
+}
+
+.button-red{
+    background-image: url("/img/button-red.png");
+}
+
+
+
+/*/src/pages/SignUp.js*/
+.button-signup{
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*/src/pages/SignIn.js */
+.button-signin{
+    margin-top: 58px;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*/src/pages/SignIn.js */
+.button-create-an-account{
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.button-home{
+    margin-top: 103px;
+    font-size: 24px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*.button-red {*/
+/*    background-image: url("/img/button-red.png");*/
+/*}*/
+
+/*.button-blue {*/
+/*    background-image: url("/img/button-blue.png");*/
+/*}*/

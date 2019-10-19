@@ -1,0 +1,44 @@
+.sorry {
+  width: 633px;
+  height: 66px;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin: auto;
+  margin-top: 60px;
+  color: white;
+}
+
+.ERROR {
+  width: 660px;
+  height: 243px;
+  font-size: 120px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a8a8a8;
+  margin: auto;
+  margin-top: -200px;
+}
+
+.error {
+  width: 660px;
+  height: 405px;
+  font-size: 210px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: auto;
+  margin-top: -40px;
+  text-align: center;
+  color: yellow;
+}

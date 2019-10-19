@@ -1,0 +1,97 @@
+/*/src/pages/SignUp.js*/
+/*/src/pages/SignIn.js*/
+.login-header{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*/src/pages/SignUp.js*/
+/*/src/pages/SignIn.js*/
+.login-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/*/src/pages/SignUp.js*/
+/*/src/pages/SignIn.js*/
+.login-form{
+    position: absolute;
+    top: 430px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 550px;
+    height: 550px;
+    margin-top: 47px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0,255,223,1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0,255,223,1);
+    box-shadow: 10px 10px 0px 0px rgba(0,255,223,1);
+}
+
+.login-done{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 550px;
+    height: 550px;
+    margin-top: 47px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0,255,223,1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0,255,223,1);
+    box-shadow: 10px 10px 0px 0px rgba(0,255,223,1);
+}
+
+.login-done h3{
+    margin-top:56px;
+    margin-bottom: 103px;
+}
+
+/*/src/pages/SignUp.js*/
+/*/src/pages/SignIn.js*/
+.login-form h3{
+    margin-top:56px;
+    margin-bottom: 50px;
+}
+
+/*/src/pages/SignUp.js*/
+/*/src/pages/SignIn.js*/
+.input-login{
+    width: 330px;
+    height: 60px;
+    color: #333333;
+    border: none;
+    background-color: #e9e9e9;
+    display: block;
+    text-align: center;
+    margin: 1em auto;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/*/src/pages/SignUp.js*/
+/*/src/pages/SignIn.js*/
+
+/*#login-btn{*/
+/*    background-image: url("/img/button.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-color: #ff1111;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+/*#signup-btn{*/
+/*    background-image: url("/img/button.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    width: 330px;*/
+/*    height: 60px;*/
+/*    object-fit: contain;*/
+/*}*/

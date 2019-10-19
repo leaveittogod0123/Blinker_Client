@@ -1,0 +1,75 @@
+.ranking-container {
+    /*플레스는 컨테이너에 적용을 하면 자식태그들의 배치가 어찌어찌 된다.*/
+    display: flex;
+    /*기본적으로 방향이 row, 그런데 나는 수직기준으로 배치를 하겠다.*/
+    /*flex-direction: column;*/
+    color: #fff;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.ranking-item {
+    width: 80%;
+    text-align: center;
+}
+
+.ranking-item-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.page-title {
+    margin-top: 10px;
+    font-size: 72px;
+    color: #ffe900;
+}
+
+/* .ranking-item-row-info {} */
+
+
+.ranking-item-row-header {
+    display: flex;
+}
+
+.ranking-item-row-header-item {
+    color: #00ffdf;
+}
+
+.ranking-item-row-header-item:nth-child(1) {
+    flex: 3;
+}
+
+.ranking-item-row-header-item:nth-child(2) {
+    flex: 5;
+    text-align: left;
+}
+
+.ranking-item-row-header-item:nth-child(3) {
+    flex: 3;
+    text-align: right;
+}
+
+
+.ranking-item-row-body {
+    display: flex;
+}
+
+.ranking-item-row-body-item {
+    margin-top: 10px;
+}
+
+.ranking-item-row-body-item:nth-child(1) {
+    flex: 3;
+    text-align: left;
+}
+
+.ranking-item-row-body-item:nth-child(2) {
+    flex: 5;
+    text-align: left;
+}
+
+.ranking-item-row-body-item:nth-child(3) {
+    flex: 3;
+    text-align: right;
+}

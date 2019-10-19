@@ -1,0 +1,43 @@
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+#page-title {
+  font-size: 72px;
+  color: #ffe900;
+  text-align: center;
+}
+
+.home-item {
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+
+.home-item:nth-child(2)::after,
+.home-item:nth-child(3)::after {
+  content: "COMING SOON";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #09788b, #000);
+  opacity: 0.9;
+  color: #fff;
+  line-height: 700px;
+}
+
+.home-item .game-box {
+  padding: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+}
+
+.home-item .game-box p {
+  padding: 1em;
+}

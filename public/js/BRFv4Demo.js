@@ -21,7 +21,7 @@ var brfv4Example = {
 	stats: {}							// fps meter
 };
 
-var brfv4BaseURL = "js/libs/brf_wasm/";
+var brfv4BaseURL = "/js/libs/brf_wasm/";
 
 (function() {
 
@@ -45,7 +45,7 @@ var brfv4BaseURL = "js/libs/brf_wasm/";
 		}
 	}
 
-	if (!support) { brfv4BaseURL = "js/libs/brf_asmjs/"; }
+	if (!support) { brfv4BaseURL = "/js/libs/brf_asmjs/"; }
 
 	console.log("Checking support of WebAssembly: " + support + " " + (support ? "loading WASM (not ASM)." : "loading ASM (not WASM)."));
 
@@ -69,27 +69,27 @@ brfv4Example.start = function() {
 
 		"https://webrtc.github.io/adapter/adapter-latest.js",	// webcam polyfill for older browsers
 
-		"js/libs/quicksettings/quicksettings.min.css",			// gui elements
-		"js/libs/quicksettings/quicksettings.js",
+		"/js/libs/quicksettings/quicksettings.min.css",			// gui elements
+		"/js/libs/quicksettings/quicksettings.js",
 
-		"js/libs/highlight/highlight_tomorrow.css",				// code highlighter
-		"js/libs/highlight/highlight.pack.js",
+		"/js/libs/highlight/highlight_tomorrow.css",				// code highlighter
+		"/js/libs/highlight/highlight.pack.js",
 
-		"js/libs/createjs/easeljs.min.js",						// canvas drawing lib
-		"js/libs/threejs/three.min.js",							// ThreeJS: a 3D engine
+		"/js/libs/createjs/easeljs.min.js",						// canvas drawing lib
+		"/js/libs/threejs/three.min.js",							// ThreeJS: a 3D engine
 
-		"js/utils/BRFv4DOMUtils.js",							// DOM handling
+		"/js/utils/BRFv4DOMUtils.js",							// DOM handling
 		// "js/utils/BRFv4Stats.js",								// FPS meter
 
-		"js/utils/BRFv4DrawingUtils_CreateJS.js",				// BRF result drawing
-		"js/utils/BRFv4Drawing3DUtils_ThreeJS.js",				// ThreeJS 3d object placement.
+		"/js/utils/BRFv4DrawingUtils_CreateJS.js",				// BRF result drawing
+		"/js/utils/BRFv4Drawing3DUtils_ThreeJS.js",				// ThreeJS 3d object placement.
 
-		"js/utils/BRFv4SetupWebcam.js",							// webcam handling
-		"js/utils/BRFv4SetupExample.js",						// overall example setup
+		"/js/utils/BRFv4SetupWebcam.js",							// webcam handling
+		"/js/utils/BRFv4SetupExample.js",						// overall example setup
 
-		"js/utils/BRFv4PointUtils.js",							// some calculation helpers
+		"/js/utils/BRFv4PointUtils.js",							// some calculation helpers
 
-		"js/examples/face_tracking/blink_detection.js"		// start with this example
+		"/js/examples/face_tracking/blink_detection.js"		// start with this example
 
 	], function() {
 

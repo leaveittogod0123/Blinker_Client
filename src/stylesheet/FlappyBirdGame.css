@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.item {
+}
+
+.item:nth-child(1) {
+  width: 640px;
+  height: 480px;
+  position: relative;
+  margin: 20px;
+  order: 2;
+}
+
+.item:nth-child(2) {
+  width: 640px;
+  height: 480px;
+  margin: 20px;
+  order: 1;
+}
+
+/*점수*/
+.game-score {
+  text-align: center;
+  font-size: 19px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.game-info {
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffe900;
+}
+
+/*게임스크린*/
+#game-play-screen {
+  position: relative;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  height: 480px;
+  background: #000;
+}
+#game-play-screen-gameover {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  height: 480px;
+  position: absolute;
+  z-index: 999;
+  display: none;
+  color: #fff;
+  font-size: 100px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: 100px;
+  align-items: center;
+  color: #ffffff;
+}
+
+#game-over-text{
+    width: 50%;
+    margin: auto;
+    margin-top: 140px;
+}
+/* 
+#game-play-screen-game {
+  position: absolute;
+  z-index: 999;
+  display: none;
+  color: #fff;
+  font-family: ArcadeClassic;
+  font-size: 100px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.72;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: 100px;
+  align-items: center;
+  color: #ffffff;
+}
+
+#game-play-screen-over {
+  position: absolute;
+  z-index: 999;
+  display: none;
+  color: #fff;
+  font-family: ArcadeClassic;
+  font-size: 100px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.72;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: 100px;
+  align-items: center;
+  color: #ffffff;
+} */
+
+/*웹캠*/
+#_wrapper,
+#_webcam {
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+  box-shadow: 10px 10px 0px 0px rgba(0, 255, 223, 1);
+}
+#_imageData,
+#_faceSub,
+#_t3d,
+#_f3d,
+#_drawing,
+#_progressBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

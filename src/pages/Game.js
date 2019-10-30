@@ -5,9 +5,7 @@ import FlappyBirdGame from "../components/FlappyBirdGame";
 import { Home, NotFound, Ranking } from "../pages";
 import "../stylesheet/Home.css";
 import Forbidden from "./Forbidden";
-import { withCookies, Cookies } from "react-cookie";
-import { instanceOf } from "prop-types";
-
+import { withCookies } from "react-cookie";
 
 class Game extends Component {
   // eslint-disable-next-line no-unused-vars
@@ -44,7 +42,6 @@ class Game extends Component {
         </div>
       );
     }
-
   }
 }
 

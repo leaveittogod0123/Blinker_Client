@@ -1,3 +1,2 @@
-// const url = "https://blinker.cf";
-const url = "http://localhost:4002";
+const url = REACT_APP_SERVER_ENDPOINT;
 export default url;

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Game, SignUp, SignIn, NotFound } from "../pages";
 import Forbidden from "../pages/Forbidden";
+import dotenv from "dotenv";
+import path from "path";
 
 import { withRouter } from "react-router-dom";
 
@@ -12,9 +14,13 @@ class App extends Component {
     this.state = {
       match: match
     };
+    dotenv.config({ path: path.join(__dirname, ".env") });
   }
 
   render() {
+    console.log(path.join(__dirname, ".env"));
+    console.log(process.env.REACT_APP_SERVER_ENDPOINT);
+
     // eslint-disable-next-line react/prop-types
     if (this.props.match.path !== "/game/flappyBird" && window.cameraStop) {
       console.log("카메라 스탑", window.cameraStop);

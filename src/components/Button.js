@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 
 class Button extends Component {
   static propTypes = {
-    post: PropTypes.func.isRequired,
-    username: PropTypes.string.isRequired,
-    password: PropTypes.string.isRequired,
+    // post: PropTypes.func.isRequired,
+    // username: PropTypes.string.isRequired,
+    // password: PropTypes.string.isRequired,
     btnType: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,

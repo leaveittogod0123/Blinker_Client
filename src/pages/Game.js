@@ -8,7 +8,6 @@ import Forbidden from "./Forbidden";
 import { withCookies } from "react-cookie";
 
 class Game extends Component {
-  // eslint-disable-next-line no-unused-vars
   constructor(props, { match }) {
     super(props);
 

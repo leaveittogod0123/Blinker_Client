@@ -6,8 +6,6 @@ import axios from "axios";
 import url from "../lib/server";
 import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
-// import axiosCookieJarSupport from "axios-cookiejar-support";
-// import tough from "tough-cookie";
 
 class SignIn extends Component {
   static propTypes = {
@@ -42,6 +40,7 @@ class SignIn extends Component {
       return;
     }
 
+    console.log(id, pwd);
     axios
       .post(`${url}/signin`, {
         username: id,

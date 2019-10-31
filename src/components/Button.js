@@ -8,12 +8,12 @@ class Button extends Component {
     // post: PropTypes.func.isRequired,
     // username: PropTypes.string.isRequired,
     // password: PropTypes.string.isRequired,
-    btnType: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    class: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired
+    // btnType: PropTypes.string.isRequired,
+    // id: PropTypes.string.isRequired,
+    // type: PropTypes.string.isRequired,
+    // class: PropTypes.string.isRequired,
+    // name: PropTypes.string.isRequired,
+    // value: PropTypes.string.isRequired
   };
 
   constructor(props) {

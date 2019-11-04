@@ -18,9 +18,6 @@ class Bird {
     document.getElementById("game-play-screen-gameover").style.display =
       "block";
 
-
-    window.cameraStop();
-    console.log('여기는 flappyBird.js');
     //FlappyBirdGame에서 정의한 post를 날립니다.
     // /src/components/FlappyBirdGame.js
     window.reactMethod.post();
@@ -111,7 +108,6 @@ class Star {
     circle(this.x, this.y, 3);
   }
 }
-// ---------------------------------
 
 let bird;
 let pipes = [];
@@ -165,19 +161,6 @@ function draw() {
         pas = true;
       }
     } else {
-      // username, score, gametype(어떤 게임인지)
-      let cookie = document.cookie;
-
-      // fetch(url, {
-      //     method: 'POST', // or 'PUT'
-      //     body: JSON.stringify(getDataFromCookie(cookie)), // data can be `string` or {object}!
-      //     headers: {
-      //         'Content-Type': 'application/json'
-      //     }
-      // }).then(res => res.json())
-      //     .then(response => console.log('Success:', JSON.stringify(response)))
-      //     .catch(error => console.error('Error:', error));
-
       bird.die();
     }
 
@@ -209,30 +192,3 @@ function respawn() {
   bird = new Bird();
   pipes.push(new Pipe(width));
 }
-
-// 추가한 코드
-
-const getDataFromCookie = cookie => {
-  const cookies = data.split(";");
-  let obj = {
-    username: "",
-    score: 0,
-    gametype: ""
-  };
-
-  for (const item of cookies) {
-    const temp = item.split("=");
-    switch (temp[0]) {
-      case "username":
-        obj.username = temp[1];
-        break;
-      case "gametype":
-        obj.gametype = temp[1];
-        break;
-    }
-  }
-
-  obj.score = document.queryselector("#flappy-score");
-
-  return obj;
-};

@@ -6,8 +6,6 @@ import axios from "axios";
 import url from "../lib/server";
 import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
-// import axiosCookieJarSupport from "axios-cookiejar-support";
-// import tough from "tough-cookie";
 
 class SignIn extends Component {
   static propTypes = {
@@ -42,6 +40,7 @@ class SignIn extends Component {
       return;
     }
 
+    console.log(id, pwd);
     axios
       .post(`${url}/signin`, {
         username: id,
@@ -50,9 +49,18 @@ class SignIn extends Component {
       })
       .then(res => {
         const { cookies } = this.props;
-        cookies.set(`username`, id);
         if (res.status === 200) {
+          cookies.set(`username`, id);
           this.setState({ done: true });
+          return;
+        }
+
+        if (res.status === 409) {
+          this.setState({
+            error: true,
+            helperText: "USERNAME ALREADY EXISTS"
+          });
+          return;
         }
       })
       .catch(err => {
@@ -61,7 +69,7 @@ class SignIn extends Component {
         }
         this.setState({
           error: true,
-          helperText: "USERNAME ALREADY EXISTS"
+          helperText: "Connection Error"
         });
       });
   };

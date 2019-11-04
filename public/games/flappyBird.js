@@ -108,7 +108,6 @@ class Star {
     circle(this.x, this.y, 3);
   }
 }
-// ---------------------------------
 
 let bird;
 let pipes = [];
@@ -193,30 +192,3 @@ function respawn() {
   bird = new Bird();
   pipes.push(new Pipe(width));
 }
-
-// 추가한 코드
-
-const getDataFromCookie = cookie => {
-  const cookies = data.split(";");
-  let obj = {
-    username: "",
-    score: 0,
-    gametype: ""
-  };
-
-  for (const item of cookies) {
-    const temp = item.split("=");
-    switch (temp[0]) {
-      case "username":
-        obj.username = temp[1];
-        break;
-      case "gametype":
-        obj.gametype = temp[1];
-        break;
-    }
-  }
-
-  obj.score = document.queryselector("#flappy-score");
-
-  return obj;
-};

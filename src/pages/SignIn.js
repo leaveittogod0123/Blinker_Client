@@ -49,9 +49,18 @@ class SignIn extends Component {
       })
       .then(res => {
         const { cookies } = this.props;
-        cookies.set(`username`, id);
         if (res.status === 200) {
+          cookies.set(`username`, id);
           this.setState({ done: true });
+          return;
+        }
+
+        if (res.status === 409) {
+          this.setState({
+            error: true,
+            helperText: "USERNAME ALREADY EXISTS"
+          });
+          return;
         }
       })
       .catch(err => {
@@ -60,7 +69,7 @@ class SignIn extends Component {
         }
         this.setState({
           error: true,
-          helperText: "USERNAME ALREADY EXISTS"
+          helperText: "Connection Error"
         });
       });
   };
